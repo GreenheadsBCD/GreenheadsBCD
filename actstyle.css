@@ -1,0 +1,354 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px; /* Increased padding for better spacing */
+    background: #E34234; /* Vermilion */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 50px; /* Increased gap between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 20px; /* Increased font size */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8B4000; /* Russet */
+}
+
+.hire-btn {
+    background: #8B4000; /* Russet */
+    color: white;
+    padding: 12px 24px; /* Slightly bigger button */
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Bigger font */
+    transition: background 0.3s ease;
+    border-radius: 30px;
+}
+
+.hire-btn:hover {
+    background: #E34234; /* Vermilion */
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+}
+
+h1 {
+    font-size: 100px;
+    color: #E34234; /* Vermilion */
+}
+.intro p:first-child {
+    font-size: 36px; /* Adjust the size as needed */
+    font-weight: bold;
+}
+
+
+.title {
+    color: #8B4000; /* Russet */
+    font-size: 50px;
+}
+
+.social-icons{
+    font-size: 80px;
+}
+
+/* Buttons */
+button {
+    padding: 24px 36px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-cv {
+    background: #E34234; /* Vermilion */
+    color: white;
+    padding: 12px 24px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 30px; /* Rounded rectangle */
+}
+
+.download-cv:hover {
+    background: #8B4000; /* Russet */
+}
+
+/* Portfolio */
+.portfolio {
+    padding: 50px;
+    background: #fff;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* This will make 3 columns */
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.project {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.load-more {
+    display: block;
+    margin: 40px auto;
+    background: transparent;
+    border: 2px solid #E34234; /* Vermilion */
+    color: #E34234; /* Vermilion */
+    font-weight: 500;
+}
+
+.load-more:hover {
+    background: #E34234; /* Vermilion */
+    color: white;
+}
+
+/* About Section */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 50px;
+    background: #FBE6D4; /* Soft beige to complement */
+}
+
+.about-content h2 {
+    color: #8B4000; /* Russet */
+    font-size: 36px; /* Increase font size */
+    margin-bottom: 20px;
+}
+
+.about-content h3 {
+    font-size: 48px; /* Increase font size */
+    color: #E34234; /* Vermilion */
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px; /* Increase font size */
+    line-height: 1.6; /* Add line height for better readability */
+    color: #333;
+}
+
+.hire-me {
+    background: #E34234; /* Vermilion */
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px; /* Increase font size */
+}
+
+.resume {
+    background: transparent;
+    border: 2px solid #8B4000; /* Russet */
+    color: #8B4000; /* Russet */
+    padding: 12px 24px;
+    font-size: 18px; /* Increase font size */
+}
+
+.resume:hover {
+    background: #8B4000; /* Russet */
+    color: white;
+}
+
+
+/* Blog Section */
+.blog {
+    padding: 50px;
+    background: #fff;
+    text-align: center;
+}
+
+.blog h2 {
+    color: #E34234; /* Vermilion */
+    margin-bottom: 40px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted grid to auto-fit cards */
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.blog-card {
+    position: relative; /* To ensure the me-box is positioned relative to the card */
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Aligning children elements in a column */
+    justify-content: space-between; /* Make sure elements are spaced out evenly */
+    height: 100%;
+}
+
+.me-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #E34234; /* Vermilion */
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 10; /* Ensure it stays on top of the content */
+}
+
+.blog-img {
+    background: #f0f0f0;
+    height: 200px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #8B4000;
+}
+
+.blog-card h3 {
+    margin: 20px 0 10px;
+    color: #8B4000;
+    font-size: 20px;
+}
+
+.blog-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.watch-more {
+    color: #E34234;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.watch-more:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr; /* Stack blog cards in a single column on smaller screens */
+    }
+}
+
+/* Testimonial */
+.testimonial {
+    text-align: center;
+    padding: 50px;
+    background: #E34234; /* Vermilion */
+    color: white;
+    border-radius: 8px; /* Adding border radius for smooth corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    margin-bottom: 50px; /* Adding margin for spacing */
+}
+
+.testimonial p {
+    font-size: 20px; /* Increase font size for better readability */
+    font-style: italic; /* Adding italic for emphasis */
+    margin-bottom: 20px; /* Adding margin for space between text and rating */
+    line-height: 1.5; /* Improved line height for readability */
+}
+
+.rating {
+    font-size: 30px; /* Increase size of stars for better visibility */
+    color: #FFD700; /* Gold color for rating stars */
+}
+
+.rating span {
+    margin-right: 5px; /* Add some spacing between stars */
+}
+
+
+/* Footer */
+footer {
+    background: #8B4000; /* Russet */
+    color: white;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+}
+
+.footer-links a:hover {
+    color: #E34234; /* Vermilion */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-grid,
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
